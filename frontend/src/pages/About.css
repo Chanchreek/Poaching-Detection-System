@@ -1,0 +1,64 @@
+.about-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  height: 100vh; /* Full viewport height */
+  position: relative; /* For overlay positioning */
+}
+
+.about-page div {
+  background-size: cover;
+  background-position: center;
+}
+
+.image1 {
+  background-image: url('./Assets/forest1.jpeg'); /* Adjusted for public folder */
+}
+
+.image2 {
+  background-image: url('./Assets/forest2.jpeg');
+}
+
+.image3 {
+  background-image: url('./Assets/forest3.jpeg');
+}
+
+.image4 {
+  background-image: url('./Assets/forest4.jpeg');
+}
+
+.content {
+  grid-column: 1 / -1; /* Span across all columns */
+  position: absolute; /* Positioning for overlay effect */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+  z-index: 1; /* Ensure text is above images */
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.about-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 0; /* Overlay behind text */
+}
