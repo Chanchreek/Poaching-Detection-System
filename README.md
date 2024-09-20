@@ -1,6 +1,3 @@
-To format text in Markdown (the language used for GitHub READMEs), you can use double asterisks (`**`) or double underscores (`__`) to make text **bold**. Here’s a version of your README with proper formatting using Markdown.
-
----
 
 # **Poaching Detection System using AI**
 
@@ -124,8 +121,6 @@ Contributions are welcome! Please fork the repository, make your changes, and su
 This project is licensed under the **MIT License**. See the `LICENSE` file for more information.
 
 ## **Contact**
-For questions or suggestions, feel free to reach out at [your email].
+For questions or suggestions, feel free to reach out at poaching-detection-system@gmail.com .
 
 ---
-
-This should now display the bold text properly in your GitHub README file!
