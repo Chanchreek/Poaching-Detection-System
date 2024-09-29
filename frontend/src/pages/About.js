@@ -10,8 +10,8 @@ const About = () => {
       <div className="image4"></div>
 
       <div className="content">
-        <h4>Minor Project</h4>
         <h1>Poaching Detection System</h1>
+        <a href="/code-project" className="code-project-link">Code Project</a>
       </div>
     </div>
   );

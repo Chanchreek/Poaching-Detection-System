@@ -2,17 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import About from './pages/About';
 import CodeProject from './pages/CodeProject';
+import Navbar from './components/Navbar' ;
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/code-project">Code Project</Link></li>
-          </ul>
-        </nav>
+      <Navbar /> {/* Ensure Navbar is used */}
+      {/* Define the routes for different components */}
 
         <Routes>
           <Route path="/" element={<About />} />
