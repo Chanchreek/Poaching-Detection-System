@@ -8,8 +8,8 @@ const Navbar = () => {
     <nav className="navbar" style={{ "--background-image": `url(${navBackground})` }}>
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
         <li><Link to="/code-project">Code Project</Link></li>
+        <li><Link to="/team">Team</Link></li>
       </ul>
     </nav>
   );
