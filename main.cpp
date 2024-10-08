@@ -65,17 +65,26 @@ int main() {
     for (size_t i = 0; i < outs.size(); ++i) {
         float* data = (float*)outs[i].data;
         for (int j = 0; j < outs[i].rows; ++j, data += outs[i].cols) {
+
+            // Extract the scores corresponding to the predicted classes
             Mat scores = outs[i].row(j).colRange(5, outs[i].cols);
+
             Point classIdPoint;
             double confidence;
+
+             // Find the class with the highest score (confidence) and its index
             minMaxLoc(scores, 0, &confidence, 0, &classIdPoint);
+            
             if (confidence > confThreshold) {
-                
                 // Calculate the center, width, and height of the bounding box (normalized values from YOLO)
                 int centerX = (int)(data[0] * frame.cols);   // X-coordinate of the bounding box center
                 int centerY = (int)(data[1] * frame.rows);   // Y-coordinate of the bounding box center
                 int width = (int)(data[2] * frame.cols);     // Width of the bounding box
                 int height = (int)(data[3] * frame.rows);    // Height of the bounding box
+
+                // Calculate the top-left corner of the bounding box
+                int left = centerX - width / 2;
+                int top = centerY - height / 2;
 
                 classIds.push_back(classIdPoint.x);
                 confidences.push_back((float)confidence);
