@@ -70,12 +70,12 @@ int main() {
             double confidence;
             minMaxLoc(scores, 0, &confidence, 0, &classIdPoint);
             if (confidence > confThreshold) {
-                int centerX = (int)(data[0] * frame.cols);
-                int centerY = (int)(data[1] * frame.rows);
-                int width = (int)(data[2] * frame.cols);
-                int height = (int)(data[3] * frame.rows);
-                int left = centerX - width / 2;
-                int top = centerY - height / 2;
+                
+                // Calculate the center, width, and height of the bounding box (normalized values from YOLO)
+                int centerX = (int)(data[0] * frame.cols);   // X-coordinate of the bounding box center
+                int centerY = (int)(data[1] * frame.rows);   // Y-coordinate of the bounding box center
+                int width = (int)(data[2] * frame.cols);     // Width of the bounding box
+                int height = (int)(data[3] * frame.rows);    // Height of the bounding box
 
                 classIds.push_back(classIdPoint.x);
                 confidences.push_back((float)confidence);
