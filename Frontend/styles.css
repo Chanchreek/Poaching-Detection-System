@@ -1,0 +1,64 @@
+/* Custom Styles */
+body{
+    font-size: 1.2rem;
+}
+header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3.0rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+section h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    text-align: center;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bg-light {
+    background-image: url('back-4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 50px; /* Adjust height as needed */
+}
+
+.text-white{
+    background-image: url('background-rasp-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 15px; /* Adjust height as needed */
+}
+
+.shift-right{
+    margin-left: 150px;
+}
+  
